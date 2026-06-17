@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Inter, sans-serif;
+    }
+
+    body{
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#f5f7fb;
+        color:#222;
+    }
+
+    .container{
+        width:90%;
+        max-width:600px;
+    }
+
+    .card{
+        background:white;
+        padding:2rem;
+        border-radius:20px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .title{
+        font-size:1.6rem;
+        font-weight:700;
+        margin-bottom:1.5rem;
+        text-align: center;
+    }
+
+    .search-box{
+        display:flex;
+        gap:10px;
+    }
+
+    .search-box input{
+        flex:1;
+        padding:14px 16px;
+        border:1px solid #ddd;
+        border-radius:12px;
+        outline:none;
+        font-size:1rem;
+        transition:.2s;
+    }
+
+    .search-box input:focus{
+        border-color:#2563eb;
+    }
+
+    .search-box button{
+        border:none;
+        background:#2563eb;
+        color:white;
+        padding:0 20px;
+        border-radius:12px;
+        cursor:pointer;
+        font-weight:600;
+        transition:.2s;
+    }
+
+    .search-box button:hover{
+        background:#1d4ed8;
+    }
+
+    .weather{
+        margin-top:2rem;
+        text-align:center;
+    }
+
+    .temp{
+        font-size:4rem;
+        font-weight:700;
+        line-height:1;
+    }
+
+    .city{
+        margin-top:8px;
+        font-size:1.3rem;
+        font-weight:600;
+    }
+
+    .condition{
+        color:#666;
+        margin-top:5px;
+    }
+
+    .details{
+        display:flex;
+        justify-content:space-between;
+        margin-top:2rem;
+        gap:15px;
+    }
+
+    .detail-card{
+        flex:1;
+        background:#f8fafc;
+        padding:1rem;
+        border-radius:12px;
+        text-align:center;
+    }
+
+    .detail-card h4{
+        color:#777;
+        font-size:0.85rem;
+        margin-bottom:5px;
+    }
+
+    .detail-card p{
+        font-weight:600;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1 class="title">Weather</h1>
+
+        <div class="search-box">
+            <input id="input-Text" type="text" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Sample Weather Data -->
+        <div class="weather">
+            <div class="temp">28°</div>
+            <div class="city-name">New Delhi</div>
+            <div class="condition">Partly Cloudy</div>
+
+            <div class="details">
+                <div class="detail-card">
+                    <h4>Humidity</h4>
+                    <p id="humidity">65%</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>Wind</h4>
+                    <p id="wind">12 km/h</p>
+                </div>
+
+                <div class="detail-card">
+                    <h4>Local time</h4>
+                    <p id="localTime">3:30 am</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
