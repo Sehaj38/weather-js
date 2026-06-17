@@ -12,7 +12,7 @@ const wind = document.getElementById("wind");
 
 async function getData(city) {
     const promise = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY=${city}&aqi=yes`
+        `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${city}&aqi=yes`
     );
     return promise.json();
 }
